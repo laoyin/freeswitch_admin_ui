@@ -8,11 +8,6 @@
       fit
       highlight-current-row
     >
-      <el-table-column align="center" label="ID" width="95">
-        <template slot-scope="scope">
-          {{ scope.$index }}
-        </template>
-      </el-table-column>
       <el-table-column label="id" width="110">
         <template slot-scope="scope">
           {{ scope.row.id }}
@@ -31,6 +26,11 @@
       <el-table-column label="effectiveCallerIdName" width="150" align="center">
         <template slot-scope="scope">
           {{ scope.row.effectiveCallerIdName }}
+        </template>
+      </el-table-column>
+      <el-table-column label="gateway" width="150" align="center">
+        <template slot-scope="scope">
+          {{ scope.row.content }}
         </template>
       </el-table-column>
       <el-table-column label="effectiveCallerIdNumber" width="150" align="center">

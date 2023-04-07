@@ -19,8 +19,27 @@
       <el-form-item label="caller_id_number">
         <el-input v-model="form.effectiveCallerIdNumber" />
       </el-form-item>
+      <el-form-item label="out-gateway">
+        <el-input v-model="form.content" />
+      </el-form-item>
       <el-form-item>
         <el-button type="primary" @click="onSubmit">创建</el-button>
+        <el-button @click="onCancel">取消</el-button>
+      </el-form-item>
+    </el-form>
+     <div> 下方批量创建 </div>
+    <el-form ref="form" :model="directoryList" label-width="120px">
+      <el-form-item label="password">
+        <el-input v-model="directoryList.password" />
+      </el-form-item>
+      <el-form-item label="分机开始号码">
+        <el-input v-model="directoryList.beginAccountcode" />
+      </el-form-item>
+      <el-form-item label="分机结束号码">
+        <el-input v-model="directoryList.endAccountcode" />
+      </el-form-item>
+      <el-form-item>
+        <el-button type="primary" @click="onSubmitDirectoryList">创建</el-button>
         <el-button @click="onCancel">取消</el-button>
       </el-form-item>
     </el-form>
@@ -28,7 +47,7 @@
 </template>
 
 <script>
-import { insertDirectory, insertGateway, getDirectory } from '@/api/table'
+import { insertDirectory, insertGateway, getDirectory, insertDirectoryList } from '@/api/table'
 export default {
   data() {
     return {
@@ -42,11 +61,24 @@ export default {
         delivery: false,
         type: [],
         effectiveCallerIdNumber: '',
-        desc: ''
-      }
+        desc: '',
+        content: ''
+      },
+
+     directoryList: {
+       password: '',
+       beginAccountcode: '',
+       endAccountcode: ''
+     }
+
     }
   },
   methods: {
+    onSubmitDirectoryList(){
+      insertDirectoryList(this.directoryList);
+      this.$message('submit!')
+      this.$router.push({ path:  '/directory/index' })
+    },
     onSubmit() {
 
       console.log(this.form);
@@ -72,6 +104,7 @@ export default {
         this.form.effectiveCallerIdName = this.list.effectiveCallerIdName;
         this.form.effectiveCallerIdNumber = this.list.effectiveCallerIdNumber;
         this.form.accountcode = this.list.accountcode;
+        this.form.content = this.list.content;
       })
     }
   },

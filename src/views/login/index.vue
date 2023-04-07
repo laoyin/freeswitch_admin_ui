@@ -58,7 +58,8 @@ import {login} from '@/api/table'
 
 import axios from 'axios'
 import QS from 'qs';
-import {setToken} from '@/utils/auth'
+import { setToken, setRole, setUserExtention } from '@/utils/auth'
+import { updateRouter } from '@/router'
 
 export default {
   name: 'Login',
@@ -133,7 +134,12 @@ export default {
             // })
             console.log(data)
             this.$store.commit('user/SET_TOKEN', data.data)
-            setToken("Bearer " + data.data)
+            setToken("Bearer " + data.data.token)
+
+            setRole(data.data.user.role)
+            setUserExtention(data.data.user.extention)
+            // updateRouter()
+
             console.log(this.redirect)
             this.$router.push({ path: this.redirect || '/' })
             this.loading = false

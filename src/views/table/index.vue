@@ -8,16 +8,17 @@
       fit
       highlight-current-row
     >
-      <el-table-column align="center" label="ID" width="95">
-        <template slot-scope="scope">
-          {{ scope.$index }}
-        </template>
-      </el-table-column>
-      <el-table-column label="id" width="110">
+        <el-table-column label="id" width="110">
         <template slot-scope="scope">
           {{ scope.row.id }}
         </template>
       </el-table-column>
+      <el-table-column align="center" label="gatewayname" width="195">
+        <template slot-scope="scope">
+          {{ scope.row.gatewayname }}
+        </template>
+      </el-table-column>
+
       <el-table-column label="ip" width="110" align="center">
         <template slot-scope="scope">
           <span>{{ scope.row.ip }}</span>
@@ -38,9 +39,14 @@
           <span>{{ scope.row.username }}</span>
         </template>
       </el-table-column>
-      <el-table-column label="password" width="110" align="center">
+      <!-- <el-table-column label="password" width="110" align="center">
         <template slot-scope="scope">
           {{ scope.row.password }}
+        </template>
+      </el-table-column> -->
+      <el-table-column label="delete-删除" width="110" align="center">
+        <template slot-scope="scope">
+           <button @click="_deleteGateway(scope.row.id)">delete</button>
         </template>
       </el-table-column>
     </el-table>
@@ -48,7 +54,7 @@
 </template>
 
 <script>
-import { getGateWayList } from '@/api/table'
+import { getGateWayList, deleteGateway } from '@/api/table'
 
 export default {
   filters: {
@@ -77,6 +83,12 @@ export default {
         console.log(response.data);
         this.list = response.data;
         this.listLoading = false
+      })
+    },
+    _deleteGateway(id){
+      deleteGateway(id).then(response=>{
+        this.$router.push({ path:  '/example/table'});
+        this.fetchData();
       })
     }
   }

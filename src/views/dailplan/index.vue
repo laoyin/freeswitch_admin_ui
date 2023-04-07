@@ -28,12 +28,17 @@
           {{ scope.row.dialplanCondition }}
         </template>
       </el-table-column>
+       <el-table-column label="delete-删除" width="110" align="center">
+        <template slot-scope="scope">
+           <button @click="_deleteDiaplan(scope.row.id)">delete</button>
+        </template>
+      </el-table-column>
     </el-table>
   </div>
 </template>
 
 <script>
-import { getDailplan } from '@/api/table'
+import { getDailplan, deleteDiaplan } from '@/api/table'
 
 export default {
   filters: {
@@ -62,6 +67,12 @@ export default {
         console.log(response.data);
         this.list = response.data;
         this.listLoading = false
+      })
+    },
+    _deleteDiaplan(id){
+      deleteDiaplan(id).then(response=>{
+        this.$router.push({ path:  '/dailplan/index'});
+        this.fetchData();
       })
     }
   }

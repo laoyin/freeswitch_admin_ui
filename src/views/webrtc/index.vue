@@ -4,12 +4,14 @@
         <div class="leftContent">
             <div style="width:300px; margin:20px">分机号<el-input v-model="userAccount" /></div>
             <div style="width:300px; margin:20px">密码<el-input v-model="userPassword" /></div>
+            <div style="width:300px; margin:20px">接听号码<el-input v-model="callUserNum" /></div>
             <div style="margin:20px"><el-button type="primary" style="margin-right:10px" @click="register">分机注册</el-button>
             
             <audio id="audio_remote" autoplay="autoplay"> </audio>
             <audio id="userAudio" autoplay="autoplay"> </audio>
             <el-button type="primary" @click="answer">接听</el-button>
             <el-button @click="hungup">挂断</el-button>
+            <el-button @click="callUser">拨打</el-button>
             </div>
         </div>
 
@@ -22,67 +24,12 @@
             <div style="width:300px; margin:20px"><el-button type="primary" @click="sendCommand">命令呼叫</el-button></div>
         </div>
 
-        <div class="tableContent">
-            <el-table
-            v-loading="listLoading"
-            :data="list"
-            element-loading-text="Loading"
-            border
-            fit
-            highlight-current-row
-            >
-            <el-table-column align="center" label="ID" width="95">
-                <template slot-scope="scope">
-                {{ scope.$index }}
-                </template>
-            </el-table-column>
-            <el-table-column label="id" width="110">
-                <template slot-scope="scope">
-                {{ scope.row.id }}
-                </template>
-            </el-table-column>
-            <el-table-column label="callStatus" width="110" align="center">
-                <template slot-scope="scope">
-                <span>{{ scope.row.callStatus }}</span>
-                </template>
-            </el-table-column>
-            <el-table-column label="callerPhone" width="110" align="center">
-                <template slot-scope="scope">
-                {{ scope.row.callerPhone }}
-                </template>
-            </el-table-column>
-            <el-table-column class-name="status-col" label="text" width="110" align="center">
-                <template slot-scope="scope">
-                {{ scope.row.text}}
-                </template>
-            </el-table-column>
-            <el-table-column align="center" prop="created_at" label="lan" width="200">
-                <template slot-scope="scope">
-                <span>{{ scope.row.lan }}</span>
-                </template>
-            </el-table-column>
-            <el-table-column label="hangupReason" width="110" align="center">
-                <template slot-scope="scope">
-                {{ scope.row.hangupReason }}
-                </template>
-            </el-table-column>
-            </el-table>
-            <div class="t-pagination">
-                <el-pagination
-                    background
-                    layout="prev, pager, next"
-                    :total="total"
-                    @current-change="current_change">
-                </el-pagination>
-            </div>
-        </div>
-
     </div>
     
 </template>
 
 <script>
-import {anwserPhone, login, hungupPhone} from '@/utils/sip_phone'
+import {anwserPhone, login, hungupPhone, softPhoneCall} from '@/utils/sip_phone'
 import { sendCallCommand } from '@/api/table'
 import { getCallHistotyList } from '@/api/table'
 
@@ -98,7 +45,8 @@ export default {
           text:"",
           lan:"",
           list: null,
-          listLoading: true
+          listLoading: true,
+          callUserNum: ""
       }
   },
   mounted() {
@@ -127,6 +75,9 @@ export default {
     },
     hungup(){
         hungupPhone(function(){}, function(){});
+    },
+    callUser(){
+        softPhoneCall(this.callUserNum);
     },
     sendCommand(){
         var callParams = {
