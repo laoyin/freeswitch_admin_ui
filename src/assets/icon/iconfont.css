@@ -1,0 +1,143 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3193462 */
+  src: url('iconfont.woff2?t=1649211545094') format('woff2'),
+       url('iconfont.woff?t=1649211545094') format('woff'),
+       url('iconfont.ttf?t=1649211545094') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mn_shangchuantupian:before {
+  content: "\e601";
+}
+
+.icon-loading:before {
+  content: "\e646";
+}
+
+.icon-editor:before {
+  content: "\e6f6";
+}
+
+.icon-close:before {
+  content: "\e747";
+}
+
+.icon-add-fill:before {
+  content: "\e778";
+}
+
+.icon-ashbin-fill:before {
+  content: "\e779";
+}
+
+.icon-pin-fill:before {
+  content: "\e788";
+}
+
+.icon-reeor-fill:before {
+  content: "\e789";
+}
+
+.icon-add-select:before {
+  content: "\e7b0";
+}
+
+.icon-shengyin:before {
+  content: "\e753";
+}
+
+.icon-shangchuan:before {
+  content: "\e63f";
+}
+
+.icon-jingyin:before {
+  content: "\e752";
+}
+
+.icon-zanting:before {
+  content: "\e602";
+}
+
+.icon-bofang:before {
+  content: "\e8a3";
+}
+
+.icon-tishi:before {
+  content: "\e653";
+}
+
+.icon-lixianim:before {
+  content: "\e60b";
+}
+
+.icon-guanbishixin:before {
+  content: "\e8dc";
+}
+
+.icon-shezhi:before {
+  content: "\e600";
+}
+
+.icon-huchudianhuatianchong:before {
+  content: "\e680";
+}
+
+.icon-jinzhide:before {
+  content: "\e6bd";
+}
+
+.icon-zixun:before {
+  content: "\e62e";
+}
+
+.icon-huiyi:before {
+  content: "\e60a";
+}
+
+.icon-14guaduan-2:before {
+  content: "\e67f";
+}
+
+.icon-zhuanfa:before {
+  content: "\e627";
+}
+
+.icon-weidenglutouxiang:before {
+  content: "\e62b";
+}
+
+.icon-shuaxin:before {
+  content: "\e62c";
+}
+
+.icon-fuwuguanli:before {
+  content: "\eaca";
+}
+
+.icon-weibiaoti--:before {
+  content: "\e611";
+}
+
+.icon-24gf-phoneIncoming:before {
+  content: "\e967";
+}
+
+.icon-24gf-phoneInOut:before {
+  content: "\e968";
+}
+
+.icon-baochilei:before {
+  content: "\e777";
+}
+
+.icon-keyix:before {
+  content: "\e61a";
+}
+

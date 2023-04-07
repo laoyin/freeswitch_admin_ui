@@ -1,0 +1,114 @@
+{
+  "id": "3193462",
+  "name": "外呼",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "110429",
+      "name": "设置",
+      "font_class": "shezhi",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "145707",
+      "name": "呼出电话_填充",
+      "font_class": "huchudianhuatianchong",
+      "unicode": "e680",
+      "unicode_decimal": 59008
+    },
+    {
+      "icon_id": "672452",
+      "name": "禁止的",
+      "font_class": "jinzhide",
+      "unicode": "e6bd",
+      "unicode_decimal": 59069
+    },
+    {
+      "icon_id": "691107",
+      "name": "咨询",
+      "font_class": "zixun",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "1240748",
+      "name": "会议",
+      "font_class": "huiyi",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "1303233",
+      "name": "Hang up-2",
+      "font_class": "14guaduan-2",
+      "unicode": "e67f",
+      "unicode_decimal": 59007
+    },
+    {
+      "icon_id": "1929167",
+      "name": "转发",
+      "font_class": "zhuanfa",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "2212974",
+      "name": "未登录头象",
+      "font_class": "weidenglutouxiang",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "2737998",
+      "name": "刷新",
+      "font_class": "shuaxin",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "5387405",
+      "name": "服务管理",
+      "font_class": "fuwuguanli",
+      "unicode": "eaca",
+      "unicode_decimal": 60106
+    },
+    {
+      "icon_id": "6399662",
+      "name": "电话",
+      "font_class": "weibiaoti--",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "7568874",
+      "name": "24gf-phoneIncoming",
+      "font_class": "24gf-phoneIncoming",
+      "unicode": "e967",
+      "unicode_decimal": 59751
+    },
+    {
+      "icon_id": "7568876",
+      "name": "24gf-phoneInOut",
+      "font_class": "24gf-phoneInOut",
+      "unicode": "e968",
+      "unicode_decimal": 59752
+    },
+    {
+      "icon_id": "9677674",
+      "name": "保持类",
+      "font_class": "baochilei",
+      "unicode": "e777",
+      "unicode_decimal": 59255
+    },
+    {
+      "icon_id": "11874503",
+      "name": "可以@2x",
+      "font_class": "keyix",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    }
+  ]
+}
