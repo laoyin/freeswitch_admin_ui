@@ -51,7 +51,7 @@ freeswitch-管理平台，
 包括 
 可配置坐席、分机
 <p align="center">
-<img src="https://github.com/laoyin/freeswitch_admin_ui/blob/main/src/assets/user_fenji.gpg"  height="500" width="720">
+<img src="https://github.com/laoyin/freeswitch_admin_ui/blob/master/src/assets/user_fenji.gpg"  height="500" width="720">
 </p>
 可配置网关路由、
 
@@ -59,10 +59,10 @@ freeswitch-管理平台，
 
 可配置通话记录等。
 <p align="center">
-<img src="https://github.com/laoyin/freeswitch_admin_ui/blob/main/src/assets/user_call.gpg"  height="500" width="720">
+<img src="https://github.com/laoyin/freeswitch_admin_ui/blob/master/src/assets/user_call.gpg"  height="500" width="720">
 </p>
 可配置实时电话监听、质检
 
 <p align="center">
-<img src="https://github.com/laoyin/freeswitch_admin_ui/blob/main/src/assets/user_jianting.jpg"  height="500" width="720">
+<img src="https://github.com/laoyin/freeswitch_admin_ui/blob/master/src/assets/user_jianting.jpg"  height="500" width="720">
 </p>
