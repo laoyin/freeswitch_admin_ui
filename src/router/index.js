@@ -21,17 +21,17 @@ export const constantRoutesDict = {
     hidden: true
   },
 
-  // '/':{
-  //   path: '/',
-  //   component: Layout,
-  //   redirect: '/dashboard',
-  //   children: [{
-  //     path: 'dashboard',
-  //     name: 'Dashboard',
-  //     component: () => import('@/views/phone-page/index'),
-  //     meta: { title: '电话', icon: 'dashboard' }
-  //   }]
-  // },
+  '/':{
+    path: '/',
+    component: Layout,
+    redirect: '/dashboard',
+    children: [{
+      path: 'dashboard',
+      name: 'Dashboard',
+      component: () => import('@/views/dashboard/index'),
+      meta: { title: '电话', icon: 'dashboard' }
+    }]
+  },
 
   '/example':{
     path: '/example',
@@ -87,30 +87,30 @@ export const constantRoutesDict = {
     ]
   },
 
-  '/ivr': {
-    path: '/ivr',
-    component: Layout,
-    children: [
-      {
-        path: 'index',
-        name: 'IVR',
-        component: () => import('@/views/ivr/index'),
-        meta: { title: 'IVR', icon: 'form' }
-      }
-    ]
-  },
-  '/ivr-add':{
-    path: '/ivr-add',
-    component: Layout,
-    children: [
-      {
-        path: 'index',
-        name: 'IVR-ADD',
-        component: () => import('@/views/ivr-add/index'),
-        meta: { title: 'IVR-增加', icon: 'form' }
-      }
-    ]
-  },
+  // '/ivr': {
+  //   path: '/ivr',
+  //   component: Layout,
+  //   children: [
+  //     {
+  //       path: 'index',
+  //       name: 'IVR',
+  //       component: () => import('@/views/ivr/index'),
+  //       meta: { title: 'IVR', icon: 'form' }
+  //     }
+  //   ]
+  // },
+  // '/ivr-add':{
+  //   path: '/ivr-add',
+  //   component: Layout,
+  //   children: [
+  //     {
+  //       path: 'index',
+  //       name: 'IVR-ADD',
+  //       component: () => import('@/views/ivr-add/index'),
+  //       meta: { title: 'IVR-增加', icon: 'form' }
+  //     }
+  //   ]
+  // },
   '/directory':{
     path: '/directory',
     component: Layout,
@@ -291,30 +291,30 @@ export const constantRoutes = [
     ]
   },
 
-  {
-    path: '/ivr',
-    component: Layout,
-    children: [
-      {
-        path: 'index',
-        name: 'IVR',
-        component: () => import('@/views/ivr/index'),
-        meta: { title: 'IVR', icon: 'form' }
-      }
-    ]
-  },
-  {
-    path: '/ivr-add',
-    component: Layout,
-    children: [
-      {
-        path: 'index',
-        name: 'IVR-ADD',
-        component: () => import('@/views/ivr-add/index'),
-        meta: { title: 'IVR-增加', icon: 'form' }
-      }
-    ]
-  },
+  // {
+  //   path: '/ivr',
+  //   component: Layout,
+  //   children: [
+  //     {
+  //       path: 'index',
+  //       name: 'IVR',
+  //       component: () => import('@/views/ivr/index'),
+  //       meta: { title: 'IVR', icon: 'form' }
+  //     }
+  //   ]
+  // },
+  // {
+  //   path: '/ivr-add',
+  //   component: Layout,
+  //   children: [
+  //     {
+  //       path: 'index',
+  //       name: 'IVR-ADD',
+  //       component: () => import('@/views/ivr-add/index'),
+  //       meta: { title: 'IVR-增加', icon: 'form' }
+  //     }
+  //   ]
+  // },
   {
     path: '/directory',
     component: Layout,

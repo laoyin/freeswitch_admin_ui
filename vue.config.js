@@ -40,7 +40,7 @@ module.exports = {
     proxy: {
 			'/pan': {     
 				// target: 'http://192.168.188.120:18081',  
-        target: 'http://121.36.255.81:18081',
+        target: 'http://127.0.0.1:18081',
 				secure: false,  // 如果是https接口，需要配置这个参数
 				changeOrigin: true,  //是否跨域
 				pathRewrite:{
